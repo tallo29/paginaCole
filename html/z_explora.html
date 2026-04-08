@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zona Explora</title>
+    <link rel="stylesheet" href="../css/explora.css">
+</head>
+<body>
+    <h1>Zona Explora</h1>
+    <nav>
+        <a href="../index.html">Volver al Inicio</a>
+        <a href="contacto.html">Zona INTERACTÚA</a>
+        <a href="servicios.html">ZONA DESARROLLA</a>
+        <a href="servicios.html">Zona CREA</a>
+        <a href="servicios.html">AdF INFANTIL</a>
+    </nav>
+    <main>
+        <section>
+            <article class="rAumentada">
+                <h2>Realidad Aumentada en el aula de Natural Science</h2>
+                 <div class="carrusel">
+                    <button onclick="anterior('ra')">⟨</button>
+
+                    <img id="ra" src="../img/ra1.png" alt="Imagen RA" class="carrusel-img">
+
+                    <button onclick="siguiente('ra')">⟩</button>
+                </div>
+                    
+            </article>
+            <article class="ThinkerPad">
+                <h2>Diseño con ThinkerPad</h2>
+                <div class="carrusel">
+                    <button onclick="anterior2('th')">⟨</button>
+
+                    <img id="th" src="../img/thinkerpad.png" alt="Imagen" class="carrusel-img">
+
+                    <button onclick="siguiente2('th')">⟩</button>
+                </div>
+                <p>El alumnado de 6º de primaria que está inmerso en el "Proyecto de Oviedo Misión Espacial 2026"
+                está diseñando el cono del cohete donde va a ir metido el paracaidas.</p>
+            </article>
+            <article class="Impresion">
+                <h2>Impresión del cono</h2>
+                <img src="../img/impresora.png" alt="Impresión del cono" class="cono">
+                <p>Comenzamos con las pruebas de impresión del cono para el cohete.</p>
+            </article>
+            <article class="Cono">
+                <h2>Cono definitivo</h2>
+                <video controls width="200">
+                <source src="../img/cono.mp4" type="video/mp4" class="video">
+                </video>
+                <p>Después de varias pruebas erróneas y algún que otro percance por fin tenemos impreso ya un cono 
+                 es probar el paracaídas y configurar la placa que emitirá los datos en tiempo real.</p>
+            </article>
+            <article class="rVirtual">
+                <h2>Realidad Virtual en el Aula de Música</h2>
+                <img src="../img/r_Virtual.png" alt="Realidad Virtual en el Aula de Música" class="r_Virtualfoto">
+                <p>Ya estamos haciendo nuestros primeros experimentos con realidad virtual Class VR 
+                dentro del aula de Primaria y como parte de nuestro proyecto de innovación :   “Aula del Futuro _ ExpresArte 2”</p>
+            </article>
+        </section>
+    </main>
+    <footer><p>&copy; Todos los derechos reservados.</p></footer>
+    <script>
+const imagenes = {
+  ra: [
+    "../img/ra1.png",
+    "../img/ra2.png",
+    "../img/ra3.png"
+  ]
+};
+
+const indices = {
+  ra: 0
+};
+
+function siguiente(id) {
+  indices[id]++;
+  if (indices[id] >= imagenes[id].length) {
+    indices[id] = 0;
+  }
+  document.getElementById(id).src = imagenes[id][indices[id]];
+}
+
+function anterior(id) {
+  indices[id]--;
+  if (indices[id] < 0) {
+    indices[id] = imagenes[id].length - 1;
+  }
+  document.getElementById(id).src = imagenes[id][indices[id]];
+}
+</script>
+<script>
+const imagenes2 = {
+  th: [
+    "../img/thinkerpad.png",
+    "../img/thinkerpad1.png",
+    "../img/thinkerpad2.png"
+  ]
+};
+
+const indices2 = {
+  th: 0
+};
+
+function siguiente2(id) {
+  indices2[id]++;
+  if (indices2[id] >= imagenes2[id].length) {
+    indices2[id] = 0;
+  }
+  document.getElementById(id).src = imagenes2[id][indices2[id]];
+}
+
+function anterior2(id) {
+  indices2[id]--;
+  if (indices2[id] < 0) {
+    indices2[id] = imagenes2[id].length - 1;
+  }
+  document.getElementById(id).src = imagenes2[id][indices2[id]];
+}
+</script>
+</body>
+</html>
