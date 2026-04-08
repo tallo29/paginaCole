@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="../css/interactua.css">
 </head>
 <body>
-    <h1>Zona Interactua</h1>
+    <h1>Zona Interactua- Aulas/Pasillos/Zonas Comunes</h1>
     <nav>  
         <a href="../index.html">Volver al Inicio</a>
         <a href="../html/z_explora.html">Zona EXPLORA</a>
@@ -15,5 +15,212 @@
         <a href="servicios.html">Zona CREA</a>
         <a href="servicios.html">AdF INFANTIL</a>
     </nav>
+    <main>
+        <section>
+            <article class="voces">
+                <h2>22 voces de nuestra tierra</h2>
+                 <div class="carrusel">
+                    <button onclick="anterior('vo')">⟨</button>
+
+                    <img id="vo" src="../img/voces.png" alt="Imagen" class="carrusel img">
+
+                    <button onclick="siguiente('vo')">⟩</button>
+                </div>
+                <p>Todo el alumnado del centro decora los paneles de la entrada con algunos de los trabajos realizados
+                 por nuestro alumnado con motivo del 8M en un proyecto titulado “22 voces de la música asturiana”.</p>
+                    
+            </article>
+            <article class="mantega">
+                <h2>Faciendo mantega</h2>
+                <div class="carrusel">
+                    <button onclick="anterior2('mt')">⟨</button>
+
+                    <img id="mt" src="../img/manteca.png" alt="Imagen" class="carrusel img">
+
+                    <button onclick="siguiente2('mt')">⟩</button>
+                </div>
+                <p>Avelino Menéndez (papá de nuestro colegio) nos explica como es el proceso para la elaboración de la manteca.</p>
+            </article>
+            <article class="Misión_Espacial">
+                <h2>Oviedo Misión Espacial 2026</h2>
+                <video controls width="200" height="250">
+                <source src="../img/misionEspacial.mp4" type="video/mp4" class="video">
+                </video>
+                <p>Comenzamos con las pruebas de impresión del cono para el cohete.</p>
+            </article>
+            <article class="aprendizaje">
+                <h2>Estaciones de aprendizaje</h2>
+                <div class="carrusel">
+                    <button onclick="anterior3('ap')">⟨</button>
+
+                    <img id="ap" src="../img/aprendizaje.png" alt="Imagen" class="carrusel img">
+
+                    <button onclick="siguiente3('ap')">⟩</button>
+                </div>
+                <p>El alumnado de 4º trabajando las fracciones en estaciones de aprendizaje</p>
+            </article>
+            <article class="acoso">
+                <h2>Detectives del acoso - TEI</h2>
+                <div class="carrusel">
+                    <button onclick="anterior4('ac')">⟨</button>
+
+                    <img id="ac" src="../img/acoso.png" alt="Imagen" class="carrusel img">
+
+                    <button onclick="siguiente4('ac')">⟩</button>
+                </div>
+                <p>El alumnado de 3º y de 5º participó en una nueva actividad de cohesión entre tutores/as y tutorizados/as denominada
+                "Detectives del acoso" en la que reflexionamos sobre distintas posibles situaciones conflictivas y la manera de encontrar soluciones pacificas.</p>
+            </article>
+            <article class="Jornadas">
+                <h2>Jornadas intergeneracionales</h2>
+                <div class="carrusel">
+                    <button onclick="anterior5('jo')">⟨</button>
+
+                    <img id="jo" src="../img/jornada.png" alt="Imagen" class="carrusel img">
+
+                    <button onclick="siguiente5('jo')">⟩</button>
+                </div>
+                <p>Hoy tenemos en el cole un grupo de mujeres del “Taller de estimulación cognitiva y memoria” del Ayuntamiento
+                 de Oviedo y a un grupo de alumnos y alumnas de la asignatura de “Lenguaje Musical” de la Universidad de Oviedo
+                para compartir con el alumnado de 4º una jornada intergeneracional.</p>
+            </article>
+        </section>
+    </main>
+    <footer><p>&copy; Todos los derechos reservados.</p></footer>
+    <script>
+    const imagenes = {
+  vo: [
+    "../img/voces.png",
+    "../img/voces1.png",
+    "../img/voces2.png"
+  ]
+};
+
+const indices = {
+  vo: 0
+};
+
+function siguiente(id) {
+  indices[id]++;
+  if (indices[id] >= imagenes[id].length) {
+    indices[id] = 0;
+  }
+  document.getElementById(id).src = imagenes[id][indices[id]];
+}
+
+function anterior(id) {
+  indices[id]--;
+  if (indices[id] < 0) {
+    indices[id] = imagenes[id].length - 1;
+  }
+  document.getElementById(id).src = imagenes[id][indices[id]];
+}
+const imagenes2 = {
+  mt: [
+    "../img/manteca.png",
+    "../img/manteca1.png",
+    "../img/manteca2.png"
+  ]
+};
+
+const indices2 = {
+  mt: 0
+};
+
+function siguiente2(id) {
+  indices2[id]++;
+  if (indices2[id] >= imagenes2[id].length) {
+    indices2[id] = 0;
+  }
+  document.getElementById(id).src = imagenes2[id][indices2[id]];
+}
+
+function anterior2(id) {
+  indices2[id]--;
+  if (indices2[id] < 0) {
+    indices2[id] = imagenes2[id].length - 1;
+  }
+  document.getElementById(id).src = imagenes2[id][indices2[id]];
+}
+const imagenes3 = {
+  ap: [
+    "../img/aprendizaje.png",
+    "../img/aprendizaje1.png",
+    "../img/aprendizaje2.png"
+  ]
+};
+
+const indices3 = {
+  ap: 0
+};
+
+function siguiente3(id) {
+  indices3[id]++;
+  if (indices3[id] >= imagenes3[id].length) {
+    indices3[id] = 0;
+  }
+  document.getElementById(id).src = imagenes3[id][indices3[id]];
+}
+
+function anterior3(id) {
+  indices3[id]--;
+  if (indices3[id] < 0) {
+    indices3[id] = imagenes3[id].length - 1;
+  }
+  document.getElementById(id).src = imagenes3[id][indices3[id]];
+}
+const imagenes4 = {
+  ac: [
+    "../img/acoso.png",
+    "../img/acoso1.png",
+  ]
+};
+
+const indices4 = {
+  ac: 0
+};
+
+function siguiente4(id) {
+  indices4[id]++;
+  if (indices4[id] >= imagenes4[id].length) {
+    indices4[id] = 0;
+  }
+  document.getElementById(id).src = imagenes4[id][indices4[id]];
+}
+
+function anterior4(id) {
+  indices4[id]--;
+  if (indices4[id] < 0) {
+    indices4[id] = imagenes4[id].length - 1;
+  }
+  document.getElementById(id).src = imagenes4[id][indices4[id]];
+}
+const imagenes5 = {
+  jo: [
+    "../img/jornada.png",
+    "../img/jornada1.png",
+  ]
+};
+
+const indices5 = {
+  jo: 0
+};
+
+function siguiente5(id) {
+  indices5[id]++;
+  if (indices5[id] >= imagenes5[id].length) {
+    indices5[id] = 0;
+  }
+  document.getElementById(id).src = imagenes5[id][indices5[id]];
+}
+
+function anterior5(id) {
+  indices5[id]--;
+  if (indices5[id] < 0) {
+    indices5[id] = imagenes5[id].length - 1;
+  }
+  document.getElementById(id).src = imagenes5[id][indices5[id]];
+}
+</script>
 </body>
 </html>
