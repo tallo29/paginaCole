@@ -40,7 +40,7 @@ section{
 }
 .rAumentada,.ThinkerPad,.Impresion,.Cono,.rVirtual{
   background-color: rgb(255, 255, 255,0.85);
-  padding: 15px;
+  padding: 5px;
   margin: 15px;
   text-align: center;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -48,10 +48,11 @@ section{
   border-radius: 10px
 }
 .r_Virtualfoto,.cono{
-  width: 50%;
-  height: 60%;
+ width: 50%;
+  max-width: 400px;
+  height: auto;
 }
-.carrusel-img {
+.carrusel img {
   width: 100%;
   max-width: 400px;
   height: 250px;
