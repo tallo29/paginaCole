@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AdF INFANTIL</title>
+    <link rel="stylesheet" href="../css/infantil.css">
+</head>
+<body>
+    
+    <h1>AdF INFANTIL</h1>
+    <nav>
+        <a href="../index.html">Volver al Inicio</a>
+        <a href="../html/z_explora.html">Zona EXPLORA</a>
+        <a href="../html/desarrolla.html">ZONA DESARROLLA</a>
+        <a href="../html/crea.html">Zona CREA</a>
+        <a href="../html/z_Interactua.html">Zona INTERACTÚA</a>
+        <a href="../html/presenta.html">Zona PRESENTA</a>
+    </nav>
+    <main>
+        <section>
+            <article class="visita">
+                <h2>Visita virtual</h2>
+                 <div class="carrusel">
+                    <button onclick="anterior('vi')">⟨</button>
+
+                    <img id="vi" src="../img/visita.png" alt="Imagen" class="carrusel img">
+
+                    <button onclick="siguiente('vi')">⟩</button>
+                </div>
+                <p>El alumnado de infantil 5 años cerró hoy su proyecto sobre Francia, Italia y Egipto haciendo un viaje virtual
+                por estos tres países con gafas 3D.</p>
+                    
+            </article>
+            <article class="juegos">
+                <h2>Juegos de mesa</h2>
+                <div class="carrusel">
+                    <button onclick="anterior2('ju')">⟨</button>
+
+                    <img id="ju" src="../img/juegos.png" alt="Imagen" class="carrusel img">
+
+                    <button onclick="siguiente2('ju')">⟩</button>
+                </div>
+                <p>En Infantil aprovechamos la docencia compartida para jugar a juegos de mesa y trabajar el pensamiento computacional.</p>
+            </article>    
+        </section>
+    </main>
+    <footer><p>&copy; Todos los derechos reservados.</p></footer>
+    <script>
+const imagenes = {
+  vi: [
+    "../img/visita.png",
+    "../img/visita1.png",
+    "../img/visita2.png",
+    "../img/visita3.png"
+  ]
+};
+
+const indices = {
+  vi: 0
+};
+function siguiente(id) {
+  indices[id]++;
+  if (indices[id] >= imagenes[id].length) {
+    indices[id] = 0;
+  }
+  document.getElementById(id).src = imagenes[id][indices[id]];
+}
+
+function anterior(id) {
+  indices[id]--;
+  if (indices[id] < 0) {
+    indices[id] = imagenes[id].length - 1;
+  }
+  document.getElementById(id).src = imagenes[id][indices[id]];
+}
+</script>
+<script>
+const imagenes2 = {
+  ju: [
+    "../img/juegos.png",
+    "../img/juegos1.png",
+    "../img/juegos2.png"
+  ]
+};
+
+const indices2 = {
+  ju: 0
+};
+
+function siguiente2(id) {
+  indices2[id]++;
+  if (indices2[id] >= imagenes2[id].length) {
+    indices2[id] = 0;
+  }
+  document.getElementById(id).src = imagenes2[id][indices2[id]];
+}
+
+function anterior2(id) {
+  indices2[id]--;
+  if (indices2[id] < 0) {
+    indices2[id] = imagenes2[id].length - 1;
+  }
+  document.getElementById(id).src = imagenes2[id][indices2[id]];
+}
+</script>
+    
+</body>
+</html>

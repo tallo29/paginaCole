@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zona PRESENTA</title>
+    <link rel="stylesheet" href="../css/presenta.css">
+</head>
+<body>
+    <h1>Zona PRESENTA- Salon de Actos(TED)</h1>
+    <nav>  
+        <a href="../index.html">Volver al Inicio</a>
+        <a href="../html/z_explora.html">Zona EXPLORA</a>
+        <a href="../html/desarrolla.html">ZONA DESARROLLA</a>
+        <a href="../html/crea.html">Zona CREA</a>
+        <a href="../html/z_Interactua.html">Zona INTERACTÚA</a>
+        <a href="../html/infantil.html">AdF INFANTIL</a>
+    </nav>
+    <main>
+        <section>
+            <article class="genuine">
+                <h2>Charla TED (Real Oviedo Genuine)</h2>
+                 <div class="carrusel">
+                    <button onclick="anterior('ch')">⟨</button>
+
+                    <img id="ch" src="../img/genunine.png" alt="Imagen" class="carrusel img">
+
+                    <button onclick="siguiente('ch')">⟩</button>
+                </div>
+                <p>Hoy recibimos en el centro a una representación de los jugadores Del Real Oviedo Genuine.
+                ¡Muchas gracias por venir a visitarnos!</p>
+                    
+            </article>
+            <article class="santirso">
+                <h2>Charla TED (Pau Santirso)</h2>
+                <div class="carrusel">
+                    <button onclick="anterior2('sa')">⟨</button>
+
+                    <img id="sa" src="../img/santirso.png" alt="Imagen" class="carrusel img">
+
+                    <button onclick="siguiente2('sa')">⟩</button>
+                </div>
+                <p>Nuestro amigo Pau Santiro, tío de uno de nuestros alumnos de 4º nos acercó la música tradicional asturiana a través de sus instrumentos.</p>
+            </article>
+            <article class="C_TED">
+                <h2>Charla TED (Seila, Lucía y Raquel)</h2>
+                <img class="img_Ted" src="../img/TED.png" alt="Imagen">
+                <p>3 mamás de 2º de Primaria nos enseñaron a tocar el pandero y la pandereta para colaborar con el proyecto de las Áreas de LLingua Asturiana y Cultura Asturiana</p>
+            </article>
+            <article class="blanca">
+                <h2>Charla TED (Blanca)</h2>
+                <div class="carrusel">
+                    <button onclick="anterior3('bl')">⟨</button>
+
+                    <img id="bl" src="../img/Blanca.png" alt="Imagen" class="carrusel img">
+
+                    <button onclick="siguiente3('bl')">⟩</button>
+                </div>
+                <p>En el día de hoy nuestra compañera Marisa junto a Blanca, una de las primeras alumnas de este colegio
+                 allá por los años 60, nos cuentan algunas curiosidades de cómo eran antes las cosas y como era el día día cuando
+                ellas eran pequeñas.</p>
+            </article>
+            <article class="ejercito">
+                <h2>Charla TED (Las mujeres en el Ejército)</h2>
+                <div class="carrusel">
+                    <button onclick="anterior4('ej')">⟨</button>
+
+                    <img id="ej" src="../img/ejercito.png" alt="Imagen" class="carrusel img">
+
+                    <button onclick="siguiente4('ej')">⟩</button>
+                </div>
+                <p>Recibimos la visita de la Comandante Marlene, la Cabo 1º Benito y la Soldado Oliveira que han pasado la mañana con el alumnado de 4º, 5º y 6º.  
+                Nos han hablado del papel de la mujer en el ejército y de su trabajo en el Acuartelamiento Cabo Noval.</p>
+            </article>
+            <article class="eva">
+                <h2>Charla TED (Eva García)</h2>
+                    <img src="../img/eva.png" alt="Imagen" class="eva_img">
+                <p>Esta semana estuvo con nosotros en el cole Eva García Vázquez (divulgadora científica) con la charla titulada:
+                "Adopta un punto de agua: Nuevas soluciones para ver lo invisible" dentro de las actividades del Día de la Mujer
+                y la Niña en la Ciencia de la Universidad de Oviedo.</p>
+            </article>
+        </section>
+    </main>
+    <footer><p>&copy; Todos los derechos reservados.</p></footer>
+    <script>
+    const imagenes = {
+  ch: [
+    "../img/genunine.png",
+    "../img/genuine1.png",
+    "../img/genuine2.png"
+  ]
+};
+
+const indices = {
+  ch: 0
+};
+
+function siguiente(id) {
+  indices[id]++;
+  if (indices[id] >= imagenes[id].length) {
+    indices[id] = 0;
+  }
+  document.getElementById(id).src = imagenes[id][indices[id]];
+}
+
+function anterior(id) {
+  indices[id]--;
+  if (indices[id] < 0) {
+    indices[id] = imagenes[id].length - 1;
+  }
+  document.getElementById(id).src = imagenes[id][indices[id]];
+}
+const imagenes2 = {
+  sa: [
+    "../img/santirso.png",
+    "../img/santirso1.png"
+  ]
+};
+
+const indices2 = {
+  sa: 0
+};
+
+function siguiente2(id) {
+  indices2[id]++;
+  if (indices2[id] >= imagenes2[id].length) {
+    indices2[id] = 0;
+  }
+  document.getElementById(id).src = imagenes2[id][indices2[id]];
+}
+
+function anterior2(id) {
+  indices2[id]--;
+  if (indices2[id] < 0) {
+    indices2[id] = imagenes2[id].length - 1;
+  }
+  document.getElementById(id).src = imagenes2[id][indices2[id]];
+}
+const imagenes3 = {
+  bl: [
+    "../img/Blanca.png",
+    "../img/Blanca1.png"
+  ]
+};
+
+const indices3 = {
+  bl: 0
+};
+
+function siguiente3(id) {
+  indices3[id]++;
+  if (indices3[id] >= imagenes3[id].length) {
+    indices3[id] = 0;
+  }
+  document.getElementById(id).src = imagenes3[id][indices3[id]];
+}
+
+function anterior3(id) {
+  indices3[id]--;
+  if (indices3[id] < 0) {
+    indices3[id] = imagenes3[id].length - 1;
+  }
+  document.getElementById(id).src = imagenes3[id][indices3[id]];
+}
+const imagenes4 = {
+  ej: [
+    "../img/ejercito.png",
+    "../img/ejercito1.png",
+  ]
+};
+
+const indices4 = {
+  ej: 0
+};
+
+function siguiente4(id) {
+  indices4[id]++;
+  if (indices4[id] >= imagenes4[id].length) {
+    indices4[id] = 0;
+  }
+  document.getElementById(id).src = imagenes4[id][indices4[id]];
+}
+
+function anterior4(id) {
+  indices4[id]--;
+  if (indices4[id] < 0) {
+    indices4[id] = imagenes4[id].length - 1;
+  }
+  document.getElementById(id).src = imagenes4[id][indices4[id]];
+}
+</script>
+    
+</body>
+</html>
